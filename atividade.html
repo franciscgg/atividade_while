@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Peças Aprovadas e Reprovadas</h1>
+    <div id="pecas"></div>
+    </br>
+    <h1>Total de Peças</h1>
+    <div id="pecass"></div>
+
+    <script>
+        let aprovados = 1;
+        let reprovados = 2;
+        let pecas1 = 0;
+        let pecas2 = 0;
+        let numero1 = 0;
+        let total = 0;
+
+
+        let resultado = "";
+
+        while (pecas1 < 3) {
+            numero1 = prompt("Digite o numero da peça")
+            pecas2 = Number(prompt("Digite 1 se a peça esta aprovada ou 2 para reprovada"))
+
+            if (pecas2 == 1) {
+                pecas1++;
+                aprovados++;
+                total++;
+            } else {
+                total++;
+                pecas1++;
+                reprovados++;
+
+                document.getElementById("pecas").innerHTML += "numero da peça: "+ numero1 + "</br>";
+            }
+        }
+        document.getElementById("pecass").innerHTML = "total de peças reprovadas: "+ total + "</br>" + "total de peças aprovadas: ";
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
